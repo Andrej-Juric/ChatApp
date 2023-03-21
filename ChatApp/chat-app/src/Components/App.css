@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Nunito Sans", sans-serif;
+  letter-spacing: 1px;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.App-header {
+  width: 100%;
+  text-align: center;
+}
+
+.Messages-list {
+  width: 100%;
+  max-width: 90%;
+  padding-right: 40px;
+}
+
+.Messages-message {
+  display: flex;
+  margin-top: 10px;
+}
+
+.Messages-message.currentMember {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.Messages-message .Message-content {
+  border-radius: 10px;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+.Messages-message.currentMember .Message-content {
+  background-color: #006aff;
+  color: #fff;
+}
+
+.Messages-message.currentMember .Message-content .username {
+  font-weight: bold;
+  color: black;
+}
+
+.Input {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: auto;
+  padding: 10px;
+}
+
+input[type="text"] {
+  text-align: left;
+  border-radius: 10px;
+  padding: 10px;
+  border: none;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+  margin-left: 10px; /* dodali smo margin da bi bilo odmaknuto od teksta */
+}
+
+button {
+  border-radius: 10px;
+  background-color: #006aff;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin-left: 10px; /* dodali smo margin da bi bilo odmaknuto od inputa */
+}
+
+button:hover {
+  background-color: #0255a4;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/*
+
+border-radius zaobljavanje kutova
+padding - poboljšavam prostor oko teksta
+border-none - svaki put maknem oko search polja border
+box-shadow - dodavanje sjene
+transition - super kul kao i :hover
+
+*/
+
+/* avatar i maksimalna širina roditelja */
+.Message-content {
+  border-radius: 10px;
+  background-color: #f2f2f2;
+  padding: 10px;
+  max-width: 70%;
+}
+
+.Messages-message .avatar {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+/* ista boja username kao i boja avatara
+.Messages-message.currentMember .Message-content .username {
+    font-weight: bold;
+    color: white;
+  }
+  
+  .Messages-message.currentMember .Message-content .username.randomColor {
+    --background-color: ${randomColor()};
+  }
+
+   */
